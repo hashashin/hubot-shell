@@ -108,7 +108,7 @@ module.exports = (robot) ->
         return false
 
     if process.env.SHELL_ROOM?
-      unless msg.envelope.room == process.env.SHELL_ROOM
+      unless msg.message.room == process.env.SHELL_ROOM
         msg.send "Forbidden - Shell actions can only be performed in ##{process.env.SHELL_ROOM}"
         return false
 
